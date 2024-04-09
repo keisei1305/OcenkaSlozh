@@ -5,6 +5,7 @@ namespace Лаба1
 {
     class Program
     {
+        //T(n) = 3n+1 = min(n) = max(n) 
         double scalar_multiplication(Vector vector1, Vector vector2)
         {
             int n = vector1.Array.Count;
@@ -13,7 +14,7 @@ namespace Лаба1
                 sum += vector1[i] * vector2[i];
             return sum;
         }
-
+        //T(n) = 3n^3 + 1 = min(n) = max(n) 
         List<Vector> matrix_multiplication(List<Vector> matrix1, List<Vector> matrix2)
         {
             int n = matrix1.Count;
@@ -35,7 +36,8 @@ namespace Лаба1
 
             return resultMatrix;
         }
-
+      
+        //T(n) = (n-1) (2+n/2+1)/2 + (n-1) (2+3n/2+4) /2
         void selection_sort(List<double> list)
         {
             int n = list.Count;
@@ -60,7 +62,9 @@ namespace Лаба1
                 }
             }
         }
-
+        //T(n) = (n-1)n/4 + 2(n-1) n/2
+        //max(n)  = (n-1)(n/2 * 4) 
+        //min(n) = (n-1) / 2
         void insertion_sort(List<double> list)
         {
             int n = list.Count;
@@ -79,7 +83,9 @@ namespace Лаба1
                 }
             }
         }
-
+        //T(n) = 2(n-1) ^2
+        //min(n) 2(n-1) 
+        //max(n) 4(n-1)^2
         void bubble_sort(List<double> list)
         {
             int n = list.Count;
