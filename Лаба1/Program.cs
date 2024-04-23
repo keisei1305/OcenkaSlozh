@@ -37,7 +37,9 @@ namespace Лаба1
             return resultMatrix;
         }
       
-        //T(n) = (n-1) (2+n/2+1)/2 + (n-1) (2+3n/2+4) /2
+        //T(n) = (n-1) (2+n/2+1)/2 + (n-1) (2+3n/2+4) /2 = (n-1)(n+4.5) T(2) = 6.5
+        // min(n) = (n-1)(2+n/2+1)
+        // max(n) = (n-1)(2+3n/2+4)
         void selection_sort(List<double> list)
         {
             int n = list.Count;
@@ -62,9 +64,9 @@ namespace Лаба1
                 }
             }
         }
-        //T(n) = (n-1)n/4 + 2(n-1) n/2
-        //max(n)  = (n-1)(n/2 * 4) 
-        //min(n) = (n-1) / 2
+        //T(n) = 2(n-1) ^2
+        //min(n) 2(n-1) 
+        //max(n) 4(n-1)^2
         void insertion_sort(List<double> list)
         {
             int n = list.Count;
@@ -83,9 +85,10 @@ namespace Лаба1
                 }
             }
         }
-        //T(n) = 2(n-1) ^2
-        //min(n) 2(n-1) 
-        //max(n) 4(n-1)^2
+
+        //T(n) = (n-1)n/4 + 2(n-1) n/2
+        //max(n)  = (n-1)(n/2 * 4) 
+        //min(n) = (n-1)n / 2
         void bubble_sort(List<double> list)
         {
             int n = list.Count;
