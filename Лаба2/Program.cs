@@ -50,7 +50,8 @@ namespace Лаба2
                 }
             }
         }
-
+        // min(n) = 3 + n*(1+2+2+2+1)
+        // max(n) = 3 + log2(n+1)*(1+log2(n+1)*(2+2+2)+1)   
         static int not_recursive(Node root)
         {
             Node p = root;
